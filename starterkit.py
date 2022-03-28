@@ -15,7 +15,7 @@ config_standalone = {
 }
 
 master_standalone = 'spark://sk-spark-cluster-master-0.sk-spark-cluster-headless.starterkit.svc.cluster.local:7077'
-name = "app_" + socket.gethostbyname + "_" + str(socket.gethostbyname(socket.gethostname()))
+name = "app_" + socket.gethostname() + "_" + str(socket.gethostbyname(socket.gethostname()))
 
 spark_conf = SparkConf()
 spark = get_spark_session(name, spark_conf, master_standalone, config_standalone)
